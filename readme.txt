@@ -26,12 +26,16 @@ This plugin use leaflet, OpenStreetMap and ClouMade, instead of Google Map.
 == Frequently Asked Questions ==
 
 = How can I use an existing post type, instead of let the plugin creating one ? =
+
+You just have to modify then paste this following code into your functions.php theme file.
 `<?php add_filter( 'nbm_post_type', 'function_for_alter' );
 function function_for_alter(){
 	return 'posts';
 } ?>`
 
 = Is there a way to use another tile provider than CloudMade ? =
+
+Yes, there are other tile provider than CloudMade (used by default in this plugin). To chose for another, simply paste this function into your functions.php.
 `<?php add_filter( 'maps_datas', 'function_for_alter' );
 function function_for_alter( $maps_datas ){
 	$maps_datas['tiles'] = "http://{s}.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg";
@@ -69,6 +73,8 @@ I tested some tiles providers, and I confirm they work with Nearby Map :
  * http://{s}.tile.openweathermap.org/map/clouds/{z}/{x}/{y}.png
 
 = Can I change default post type properties ? =
+
+Yes, doing this into your functions.php theme file.
 `<?php add_filter( 'places_args', 'function_for_alter' );
 function function_for_alter( $args ){
 	$args['rewrite'] = array( 'slug', 'local business' );
@@ -77,6 +83,8 @@ function function_for_alter( $args ){
 } ?>`
 
 = Locate places with Nearby Map seem to be imprecise, can I improve precision of returned coordinates ? =
+
+Just paste this :
 `<?php add_filter( 'nbm_try_to_find_with_openstreetmap', '__return_false' ); ?>`
 
 = I already have a CloudMade API key, can I use it ? =
@@ -119,6 +127,10 @@ function function_for_alter(){
 function function_for_alter(){
 	//Do stuff...
 } ?>`
+
+== Screenshots ==
+
+1. View of the main map, during a route animation
 
 == Changelog ==
 
