@@ -49,26 +49,19 @@ I tested some tiles providers, and I confirm they work with Nearby Map :
 * mapquest (this one need to precise subdomains) :
  * http://otile1.mqcdn.com/tiles/1.0.0/map/{z}/{x}/{y}.jpg
  * http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg 
-  * this one dont deliver tiles for high zoom level (except for USA)
-
-
+   * this one dont deliver tiles for high zoom level (except for USA)
 * openstreetmap :
  * http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png
  * http://{s}.tile.osm.org/{z}/{x}/{y}.png
-
 * mapbox
  * http://{s}.tiles.mapbox.com/v3/{user}.{map}/{z}/{x}/{y}.png
-
 * OpenCycleMap
  * http://{s}.tile.opencyclemap.org/cycle/{z}/{x}/{y}.png
-
 * Stamen
  * http://{s}.tile.stamen.com/toner/{z}/{x}/{y}.png
-
 * ESRI
  * http://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}.png
  * http://server.arcgisonline.com/ArcGIS/rest/services/World_Shaded_Relief/MapServer/tile/{z}/{y}/{x}.png
-
 * Open Weather Map
  * http://{s}.tile.openweathermap.org/map/clouds/{z}/{x}/{y}.png
 
