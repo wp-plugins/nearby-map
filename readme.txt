@@ -1,19 +1,55 @@
 === Nearby Map by Wabeo ===
 Contributors: willybahuaud
-Tags: leaflet, around map, geolocalization, route, places, cloudmade, openstreetmap, events organization
+Tags: Leaflet, around map, geolocalization, route, places, CloudMade, OpenStreetMap, planning event, Google Maps
 Requires at least: 3.0
 Tested up to: 3.5.1
 Stable tag: 3.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Allow to build a map to show the activities, places and services around a given geographical point.
+Allow you to insert a map to show the activities, places and services around a given geographical point.
 
 == Description ==
 
-Allow to build a map to show the activities, places and services around a given geographical point.
+Nearby Map allow you to easily insert a Map into your content. With it, you can show a main location and every interesting places around it.
 
-This plugin use leaflet, OpenStreetMap and ClouMade, instead of Google Map.
+The map is dynamic. You can show to users the best way to travel from your main location to any other one.
+Nearby Map also includes SEO optimisation with Schema.org markup.
+
+= Should I use Nearby Map ? =
+  
+Here's a few example to show you what you can do with Nearby Map
+
+* You're planning an event, and you want to show every location involved in it (for example a wedding or a trip)
+* You own a camping or an hotel, and you want to show to every customer what's around it
+* You are planning a seminar, and you want to give to everyone informations about restaurants and hotels for this event.
+* And everything else involving a map of course...
+
+= Features =
+
+1. It creates a custom post type to handle every location, with an easy metabox to enter every information about them.
+2. It creates a nice map with custom markers and informations.
+3. It adds a full interactive list of each place with more information for users.
+4. Users have access to a navigation system betwen every location on the map.
+5. for each place, Nearby Map creates a new page with more detail and geographical information
+
+= How does Nearby Map works ? =
+
+Nearby Map does not use Google Map, beacause there is other good librairies :
+
+* [Leaflet](http://leafletjs.com/), in order to create the map and every Location (under [BSD open-source licence](http://fr.wikipedia.org/wiki/Licence_BSD))
+* [OpenStreetMap](http://www.openstreetmap.org/), to gather geograhpical information (under [Open Data Commons Open Database License](http://opendatacommons.org/licenses/odbl/))
+* [CloudMade](http://cloudmade.com/) to retrieve GPS coordinates, and in order to generate every route from one location to another [Creative Commons Attribution 2.0 License](http://creativecommons.org/licenses/by/2.0/)
+* An [icon font](http://fontello.com) for every custom Markers ([maki, by MapBox (BSD)](https://github.com/mapbox/maki/blob/gh-pages/LICENSE.txt),[Typicons, by Stephen Hutchings (CC BY-SA 3.0)](http://creativecommons.org/licenses/by-sa/3.0/) and [Font Awesome, by Dave Gandy (CC BY 3.0)](http://creativecommons.org/licenses/by/3.0/))
+* For Pins Maps , i've drawn my inspiration from [those icons](http://medialoot.com/item/free-vector-map-location-pins/)
+
+= Nearby Map is optimised for SEO =
+
+When a map is displayed, structured data from [schema.org](http://schema.org/) is included for each location.
+
+= An adaptable plugin =
+
+Nearby Map has been created with custom hooks and filter : you can override every data and action to improve or adapt the plugin to suit your needs. [FAQ](http://wordpress.org/extend/plugins/nearby-map/faq/)
 
 == Installation ==
 
@@ -142,6 +178,7 @@ function function_for_alter(){
 == Screenshots ==
 
 1. View of the main map, during a route animation
+2. View of a place block information
 
 == Changelog ==
 
