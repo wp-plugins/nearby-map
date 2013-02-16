@@ -8,7 +8,7 @@ Stable tag: 3.5.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Allow you to insert a map to show the activities, places and services around a given geographical point.
+Allow you to insert a map to show activities, places and services around a given geographical point.
 
 == Description ==
 
