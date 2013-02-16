@@ -1,6 +1,7 @@
 === Nearby Map by Wabeo ===
 Contributors: willybahuaud
-Tags: Leaflet, around map, geolocalization, route, places, CloudMade, OpenStreetMap, planning event, Google Maps
+Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A4P2WCN4TZK26&lc=FR&item_name=Wabeo&item_number=3
+Tags: Nearby map, map, Leaflet, around, geolocalization, route, places, CloudMade, OpenStreetMap, planning event, Google Maps
 Requires at least: 3.0
 Tested up to: 3.5.1
 Stable tag: 3.5.1
