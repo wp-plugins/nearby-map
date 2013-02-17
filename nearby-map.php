@@ -3,7 +3,7 @@
 Plugin Name: Nearby Map by Wabeo
 Plugin URI: http://wabeo.fr
 Description: Allow to build a map to show the activities, places and services around a given geographical point.
-Version: 0.9
+Version: 0.9.1
 Author: Willy Bahuaud
 Author URI: http://wabeo.fr
 License: GPLv2
@@ -703,9 +703,10 @@ function nbm_deep_into_my_script(){
 			);
 	endwhile; endif;
 
-	$key = apply_filters( 'cloudmate_key', '4D7C045AF92D4BCA9199E50BD83B1A46' );
+	$key = apply_filters( 'cloudmade_key', '4D7C045AF92D4BCA9199E50BD83B1A46' );
+	$style = apply_filters( 'cloudmade_style', '997' );
 	$maps_datas = array(
-		'tiles'       => 'http://{s}.tile.cloudmade.com/' . $key . '/997/256/{z}/{x}/{y}.png',
+		'tiles'       => 'http://{s}.tile.cloudmade.com/' . $key . '/' . $style . '/256/{z}/{x}/{y}.png',
 		'attribution' => ' &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> / <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a> / © <a href="http://cloudmade.com">CloudMade</a>',
 		'subdomains'  => 'abc',
 		'markers'     => $markers,

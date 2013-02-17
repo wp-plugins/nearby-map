@@ -70,6 +70,21 @@ function function_for_alter(){
 	return 'posts';
 } ?>`
 
+= I want to change map style, is it possible ? =
+
+Tired of the same old maps? CloudMade give ability for users to [use custom map or build thier own](http://maps.cloudmade.com/editor).
+After choosing, you juste have to precise the id of your custom style into your functions.php, by the way of the filter cloudmade_style. 
+
+`<?php add_filter( 'cloudmade_style', 'my_custom_style' );
+function my_custom_style(){
+	//If I want to use "midnight Comander coloration" style
+	return 999;
+} ?>`
+
+Loading time tiles is still faster if you opt for a custom style proposed by CloudMade (8 possibilities).
+
+You can see some examples at [screenshots section](http://wordpress.org/extend/plugins/nearby-map/screenshots/).
+
 = Is there a way to use another tile provider than CloudMade ? =
 
 Yes, there are other tile provider than CloudMade (used by default in this plugin). To chose for another, simply paste this function into your functions.php.
@@ -124,7 +139,7 @@ Use the filter namned *nbm_try_to_find_with_openstreetmap*. Just paste this :
 = I already have a CloudMade API key, can I use it ? =
 
 You can use yours, using *cloudmade_key* filter hook, into your functions.php
-`<?php add_filter( 'cloudmate_key', 'function_for_alter' );
+`<?php add_filter( 'cloudmade_key', 'function_for_alter' );
 function function_for_alter(){
 	return 'dfsljfdjfsdjfqsjdkdfjkfqf'; //for example
 } ?>`
@@ -179,9 +194,15 @@ function function_for_alter(){
 == Screenshots ==
 
 1. View of the main map, during a route animation
-2. View of a place block information
+2. Some example of custom map styles
+3. View of a place block information
+
 
 == Changelog ==
+
+= 0.9.1 =
+* Deliver a new filter hook for customize map styles (to choose from http://maps.cloudmade.com/editor)
+* Solve a bug into *cloudmade_key* function
 
 = 0.9 =
 * Initial release
