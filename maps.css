@@ -437,6 +437,9 @@ keyframes bounce-shadow{
 	font-size:1.175em;
 	margin:1em 0 0.25em;
 }
+.nbm-route-instr{
+	padding-right:50px;
+}
 .nbm-route-instr span{
 	font-weight:bold;
 }
