@@ -3,7 +3,7 @@
 Plugin Name: Nearby Map by Wabeo
 Plugin URI: http://wabeo.fr
 Description: Allow to build a map to show the activities, places and services around a given geographical point.
-Version: 0.9.1
+Version: 0.9.2
 Author: Willy Bahuaud
 Author URI: http://wabeo.fr
 License: GPLv2

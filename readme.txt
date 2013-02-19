@@ -4,7 +4,7 @@ Donate link: https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=A4P2W
 Tags: Nearby map, map, Leaflet, around, geolocalization, route, places, CloudMade, OpenStreetMap, planning event, Google Maps
 Requires at least: 3.0
 Tested up to: 3.5.1
-Stable tag: 0.9.1
+Stable tag: 0.9.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -199,6 +199,10 @@ function function_for_alter(){
 
 
 == Changelog ==
+
+= 0.9.2 =
+* Different speed for route markers (bicyle, foot or car)
+* Solve a minor bug when you donesn't want a central place
 
 = 0.9.1 =
 * Deliver a new filter hook for customize map styles (to choose from http://maps.cloudmade.com/editor)

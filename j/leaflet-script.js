@@ -167,6 +167,20 @@ jQuery(document).ready(function($){
 				}
 			}
 			
+			function wichSpeed(trs){
+				switch(trs){
+					case 'bicycle':
+						return 1000;
+						break;
+					case 'foot':
+						return 1250;
+						break;
+					default :
+						return 500;
+						break;
+				}
+			}
+
 			//ROUTE
 			$.ajax({
 				url:"/wp-admin/admin-ajax.php",
@@ -221,6 +235,7 @@ jQuery(document).ready(function($){
 					var velo = L.animatedMarker(firstpolyline.getLatLngs(), {
 						icon: bikeIcon,
 						autoStart: false,
+						interval: wichSpeed($('.nbm-trans:checked').val()),
 						onEnd: function() {
 							$(this._shadow).fadeOut();
 							$(this._icon).fadeOut(3000, function(){
