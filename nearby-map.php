@@ -183,12 +183,15 @@ function nbm_save_metaboxes( $post_ID ) {
 	}
 	if( isset( $_POST[ 'nbm_important' ] ) ) {
 		check_admin_referer( 'nbm_infos-save_' . $_POST[ 'post_ID' ], 'nbm_infos-nonce' );
+		$prev = get_option( 'nbm_important' );
 		if( $_POST[ 'nbm_important' ] == 'yes' ) {
-			$prev = get_option( 'nbm_important' );
 			update_post_meta( $prev, '_nbm_important', 2);
 
 			update_option( 'nbm_important', $post_ID );
 			update_post_meta( $post_ID, '_nbm_important', 1);
+		} elseif( $prev == $post_ID ) {
+			update_option( 'nbm_important', false );
+			update_post_meta( $post_ID, '_nbm_important', 2);
 		} else {
 			update_post_meta( $post_ID, '_nbm_important', 2);
 		}
@@ -524,7 +527,7 @@ function nbm_render_map( $atts ){
 
 			$output .= '<div data-nbm="'.$places->post->ID.'" class="nbm-more ' . $icon[ 'color' ] . '" itemscope itemtype="http://schema.org/' . ( ( $type_of_place = get_post_meta( $places->post->ID, '_nbm_type_of_place', true ) ) ? sanitize_html_class( $type_of_place ) : 'Place' ) . '">';
 			$output .= $img;
-			$output .= ( $important != $places->post->ID ) ? '<div class="nbm-distance">' . get_distance( $ref['lat'], $ref['long'], $coords['lat'], $coords['long'] ) . 'km</div>' : '';
+			$output .= ( $important != false && $important != $places->post->ID ) ? '<div class="nbm-distance">' . get_distance( $ref['lat'], $ref['long'], $coords['lat'], $coords['long'] ) . 'km</div>' : '';
 			$output .= the_title( '<strong class="nbm-info-title" itemprop="name">', '</strong>', false );
 			$output .= '<div class="nbm-infos-comp">';
 				$output .= ( $tel = get_post_meta( $places->post->ID, '_nbm_tel', true ) ) ? '<div class="nbm-info-comp"><a href="tel:'.$tel.'" title="'.$tel.'" itemprop="telephone">'.$tel.'</a></div>' : '';
