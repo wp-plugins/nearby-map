@@ -623,7 +623,7 @@ function nbm_render_map( $atts ){
 				)
 			) );
 	}
-
+	wp_reset_postdata();
 	return apply_filters( 'nbm_map', $output );
 }
 add_shortcode( 'maps', 'nbm_render_map' );
